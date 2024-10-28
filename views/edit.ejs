@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User Details</title>
+</head>
+<body>
+    <h3>Edit Your Details: <%= userDetails.name %></h3>
+
+    <form method="post" action="/data/<%= userDetails._id %>?_method=PUT">
+        <h5>Edit your name</h5>
+        <input type="text" name="name" value="<%= userDetails.name %>" required>
+        <h5>Edit your Email</h5>
+        <input type="email" name="email" value="<%= userDetails.email %>" required>
+        <h5>Edit your Number</h5>
+        <input type="number" name="number" value="<%= userDetails.number %>" required>
+        <button type="submit">Edit</button>
+    </form>
+</body>
+</html>
