@@ -1,21 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit User Details</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Edit User Details</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f7971e, #ffd200);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .edit-form {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    h3, h5 {
+      color: #333;
+    }
+
+    input {
+      width: 95%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #ff9900;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #e68a00;
+    }
+  </style>
 </head>
 <body>
+  <div class="edit-form">
     <h3>Edit Your Details: <%= userDetails.name %></h3>
-
     <form method="post" action="/data/<%= userDetails._id %>?_method=PUT">
-        <h5>Edit your name</h5>
-        <input type="text" name="name" value="<%= userDetails.name %>" required>
-        <h5>Edit your Email</h5>
-        <input type="email" name="email" value="<%= userDetails.email %>" required>
-        <h5>Edit your Number</h5>
-        <input type="number" name="number" value="<%= userDetails.number %>" required>
-        <button type="submit">Edit</button>
+      <h5>Edit your name</h5>
+      <input type="text" name="name" value="<%= userDetails.name %>" required />
+      <h5>Edit your Email</h5>
+      <input type="email" name="email" value="<%= userDetails.email %>" required />
+      <h5>Edit your Number</h5>
+      <input type="number" name="number" value="<%= userDetails.number %>" required />
+      <button type="submit">Edit</button>
     </form>
+  </div>
 </body>
 </html>

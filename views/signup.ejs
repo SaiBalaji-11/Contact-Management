@@ -1,16 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signup</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+
+    .signup-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      color: #333;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 95%;
+      padding: 12px;
+      background: #ff5e62;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #ff3b3f;
+    }
+  </style>
 </head>
 <body>
-    <h2>Create your new account</h2>
+  <div class="signup-box">
+    <h2>Create Your New Account</h2>
     <form action="/signup" method="post">
-        <input type="text" name="userName" placeholder="Enter username" required>
-        <input type="password" name="password" placeholder="Enter password" required>
-        <button type="submit">Submit</button>
+      <input type="text" name="userName" placeholder="Enter username" required />
+      <input type="password" name="password" placeholder="Enter password" required />
+      <button type="submit">Submit</button>
     </form>
+  </div>
 </body>
 </html>

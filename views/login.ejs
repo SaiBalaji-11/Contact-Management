@@ -1,17 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+
+    .login-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
+      color: #333;
+    }
+
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      width: 95%;
+      padding: 12px;
+      background: #185a9d;
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #143a6d;
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #185a9d;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <h1>Login In</h1>
+  <div class="login-box">
+    <h1>Log In</h1>
     <form action="/login" method="post">
-        <input type="text" name="userName" placeholder="Enter your username" required>
-        <input type="password" name="password" placeholder="Enter your password" required>
-        <button type="submit">Submit</button>
+      <input type="text" name="userName" placeholder="Enter your username" required />
+      <input type="password" name="password" placeholder="Enter your password" required />
+      <button type="submit">Submit</button>
     </form>
     <a href="/signup">Create a new account</a>
+  </div>
 </body>
 </html>
